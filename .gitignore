@@ -219,3 +219,4 @@ pip-selfcheck.json
 # Support for Project snippet scope
 hh.log
 # End of https://www.toptal.com/developers/gitignore/api/python,visualstudiocode,macos,venv
+/.vscode

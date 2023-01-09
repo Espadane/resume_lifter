@@ -6,14 +6,26 @@
 
 ## Инструкция по запуску
 
-- Создать и активировать виртуальное окружение, обновить pip ("python3 -m venv venv && source venv/bin/activate && secret && python3 -m pip install --upgrade pip")
-- Установить зависимости ("pip3 install -r requerements.txt")
+- Создать и активировать виртуальное окружение, обновить pip - `python3 -m venv venv && source venv/bin/activate && python3 -m pip3 install --upgrade pip`
+- Установить зависимости - `pip3 install -r requerements.txt`
+- Установить Google Chrome
 - Прописать в config.py переменные окружения:
-    - MY_EMAIL - почта от HH
-    - MY_PASSWORD - пароль от HH
-    - Если необходимо поменять USER_AGENT
-- Дать права на запуск файлу ("chmod +x ./lifter")
-- Запустить скрипт "./lifter"
+    - MY_EMAIL - почта от HH.
+    - MY_PASSWORD - пароль от HH.
+    - Если необходимо поменять USER_AGENT.
+- Дать права на запуск файлу - `chmod +x ./main.py`
+- Сменить уровень логера на 'WARNING' если необходимо.
+- Запустить скрипт - `python3 ./main.py`
 
 ## Запуск скрипта по расписанию
-
+- Установить зависимости вне виртуального окружения.
+- Изменить PROJECT_DIR в config.py на путь к папке проекта.
+- Изменить `crontab -e`. Например поднятия каждые 4 часа:
+```
+MY_EMAIL=your@email.com
+MY_PASSWORD=MyVeryStrongPassword
+0 7 * * * path_to_python3 absolute_path_to_main.py
+10 13 * * * path_to_python3 absolute_path_to_main.py
+20 17 * * * path_to_python3 absolute_path_to_main.py
+30 21 * * * path_to_python3 absolute_path_to_main.py
+```
