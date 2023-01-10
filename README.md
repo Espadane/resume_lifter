@@ -25,7 +25,7 @@
 MY_EMAIL=your@email.com
 MY_PASSWORD=MyVeryStrongPassword
 0 7 * * * path_to_python3 absolute_path_to_main.py
-10 13 * * * path_to_python3 absolute_path_to_main.py
-20 17 * * * path_to_python3 absolute_path_to_main.py
-30 21 * * * path_to_python3 absolute_path_to_main.py
+10 11 * * * path_to_python3 absolute_path_to_main.py
+20 15 * * * path_to_python3 absolute_path_to_main.py
+30 19 * * * path_to_python3 absolute_path_to_main.py
 ```
