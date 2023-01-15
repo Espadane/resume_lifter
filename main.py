@@ -106,15 +106,16 @@ def _lift_my_resumes(driver):
     try:
         buttons = driver.find_elements(by=By.TAG_NAME, value='button')
         for button in buttons:
-            if button.get_attribute('data-qa') == 'resume-update-button':
-                button.click()
-                logger.debug('Кнопка поднятия резюме нажата.')
-                counter +=1
+            if button.get_attribute('data-qa') == 'resume-update-button_actions':
+                if button.text == 'Поднять резюме':
+                    button.click()
+                    logger.debug('Кнопка поднятия резюме нажата.')
+                    counter +=1
         if counter == 0:
             logger.debug('Резюме требующих поднятия нет.')
             resume_update_text = driver.find_element(by=By.CLASS_NAME,
                                             value='applicant-resumes-update')
-            logger.debug(resume_update_text.text)
+            logger.info(resume_update_text.text)
         else:
             logger.debug(f'Поднято {counter} резюме')
     except WebDriverException as error:
