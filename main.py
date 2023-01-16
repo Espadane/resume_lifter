@@ -107,7 +107,7 @@ def _lift_my_resumes(driver):
         buttons = driver.find_elements(by=By.TAG_NAME, value='button')
         for button in buttons:
             if button.get_attribute('data-qa') == 'resume-update-button_actions':
-                if button.text == 'Поднять резюме':
+                if button.text == 'Поднять в поиске':
                     button.click()
                     logger.debug('Кнопка поднятия резюме нажата.')
                     counter +=1
