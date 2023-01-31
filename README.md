@@ -7,7 +7,7 @@
 ## Инструкция по запуску
 
 - Создать и активировать виртуальное окружение, обновить pip - `python3 -m venv venv && source venv/bin/activate && python3 -m pip3 install --upgrade pip`
-- Установить зависимости - `pip3 install -r requerements.txt`
+- Установить зависимости - `pip3 install -r requirements.txt`
 - Установить Google Chrome
 - Прописать в config.py переменные окружения:
     - MY_EMAIL - почта от HH.
