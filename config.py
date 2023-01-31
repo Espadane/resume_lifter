@@ -5,6 +5,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 PROJECT_DIR = './'
 
+PROJECT_NAME = 'Resume lifter'
+
 HH_LOGIN = getenv("MY_EMAIL")
 if not HH_LOGIN:
     exit("Ошибка: не задана почта.")
